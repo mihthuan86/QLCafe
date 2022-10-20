@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF1D52A1-3B0E-4774-8D58-C98ECB3CE2FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyCafe</RootNamespace>
+    <AssemblyName>QuanLyCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFood.Designer.cs">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block.Designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePersional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePersional.Designer.cs">
+      <DependentUpon>ChangePersional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdCategory.Designer.cs">
+      <DependentUpon>frmAdCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdFood.Designer.cs">
+      <DependentUpon>frmAdFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdTables.Designer.cs">
+      <DependentUpon>frmAdTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPay.Designer.cs">
+      <DependentUpon>frmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanlythongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanlythongke.designer.cs">
+      <DependentUpon>frmQuanlythongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="PlusTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlusTable.Designer.cs">
+      <DependentUpon>PlusTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReFood.Designer.cs">
+      <DependentUpon>ReFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReplaceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceTable.Designer.cs">
+      <DependentUpon>ReplaceTable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFood.resx">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePersional.resx">
+      <DependentUpon>ChangePersional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdCategory.resx">
+      <DependentUpon>frmAdCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdFood.resx">
+      <DependentUpon>frmAdFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdTables.resx">
+      <DependentUpon>frmAdTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPay.resx">
+      <DependentUpon>frmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanlyThongke.resx">
+      <DependentUpon>frmQuanlythongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.Block.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.ChangePersional.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmAdAccount.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmAdCategory.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmAddFood.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmAdFood.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmAdTables.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmMain.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmPay.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.frmQuanlythongke.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.PlusTable.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.ReFood.resources" />
+    <EmbeddedResource Include="obj\Debug\QuanLyCafe.ReplaceTable.resources" />
+    <EmbeddedResource Include="PlusTable.resx">
+      <DependentUpon>PlusTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReFood.resx">
+      <DependentUpon>ReFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplaceTable.resx">
+      <DependentUpon>ReplaceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\QuanLyCafe.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\QuanLyCafe.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\QuanLyCafe.csproj.CopyComplete" />
+    <None Include="obj\Debug\QuanLyCafe.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\QuanLyCafe.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\QuanLyCafe.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DevExpress.Data.v21.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v21.2.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v21.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v21.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v21.2.resources.dll" />
+    <Content Include="bin\Debug\QuanLyCafe.exe" />
+    <Content Include="bin\Debug\QuanLyCafe.pdb" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v21.2.resources.dll" />
+    <Content Include="img\drink.png" />
+    <Content Include="img\hot-drink.png" />
+    <Content Include="img\Iconsmind-Outline-Coffee.ico" />
+    <Content Include="img\padlock.png" />
+    <Content Include="obj\Debug\QuanLyCafe.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\QuanLyCafe.exe" />
+    <Content Include="obj\Debug\QuanLyCafe.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
