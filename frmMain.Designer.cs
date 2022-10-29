@@ -32,12 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tmiAcount = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tmiViews = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmiPersonalInfor = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tmiHistory = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tmiChange = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tmiSleep = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +45,8 @@
             this.tmiTable = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tmiAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gpbTable = new System.Windows.Forms.GroupBox();
             this.pnlTable = new System.Windows.Forms.Panel();
             this.gpbBill = new System.Windows.Forms.GroupBox();
@@ -108,8 +104,6 @@
             this.tsmMoBan = new System.Windows.Forms.ToolStripMenuItem();
             this.aCCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.gpbTable.SuspendLayout();
             this.gpbBill.SuspendLayout();
@@ -142,9 +136,6 @@
             // tmiAcount
             // 
             this.tmiAcount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.tmiViews,
-            this.toolStripSeparator2,
             this.tmiChange,
             this.toolStripSeparator3,
             this.tmiSleep,
@@ -153,47 +144,6 @@
             this.tmiAcount.Name = "tmiAcount";
             this.tmiAcount.Size = new System.Drawing.Size(85, 24);
             this.tmiAcount.Text = "Tài khoản";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(301, 6);
-            // 
-            // tmiViews
-            // 
-            this.tmiViews.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmiPersonalInfor,
-            this.toolStripSeparator5,
-            this.tmiHistory});
-            this.tmiViews.Name = "tmiViews";
-            this.tmiViews.Size = new System.Drawing.Size(304, 26);
-            this.tmiViews.Text = "Xem lịch sử";
-            // 
-            // tmiPersonalInfor
-            // 
-            this.tmiPersonalInfor.Name = "tmiPersonalInfor";
-            this.tmiPersonalInfor.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.I)));
-            this.tmiPersonalInfor.Size = new System.Drawing.Size(315, 26);
-            this.tmiPersonalInfor.Text = "Personal information";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(312, 6);
-            // 
-            // tmiHistory
-            // 
-            this.tmiHistory.Name = "tmiHistory";
-            this.tmiHistory.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.H)));
-            this.tmiHistory.Size = new System.Drawing.Size(315, 26);
-            this.tmiHistory.Text = "Access history";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(301, 6);
             // 
             // tmiChange
             // 
@@ -295,6 +245,18 @@
             this.tmiAccount.Size = new System.Drawing.Size(277, 26);
             this.tmiAccount.Text = "Danh sách tài khoản";
             this.tmiAccount.Click += new System.EventHandler(this.tmiAccount_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(274, 6);
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.tmiThongKe_Click);
             // 
             // gpbTable
             // 
@@ -929,18 +891,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.tmiThongKe_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(274, 6);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -990,17 +940,11 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tmiAcount;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem tmiViews;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem tmiChange;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem tmiSleep;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem tmiLogout;
-        private System.Windows.Forms.ToolStripMenuItem tmiPersonalInfor;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem tmiHistory;
         private System.Windows.Forms.GroupBox gpbTable;
         private System.Windows.Forms.Panel pnlTable;
         private System.Windows.Forms.GroupBox gpbBill;

@@ -11,6 +11,7 @@ namespace QuanLyCafe
 {
     public partial class frmAdTables : Form
     {
+        DataTable tabledata;
         public frmAdTables()
         {
             InitializeComponent();
@@ -26,7 +27,8 @@ namespace QuanLyCafe
             try
             {
                 DataProvider provider = new DataProvider();
-                DataTable table = provider.execQuery("select maban as \"Mã Bàn\", tenban as \"Tên Bàn\", trangthaiban as \"Trang thái bàn\"\r\nfrom Ban");
+                DataTable table = provider.execQuery("select tenban as \"Tên Bàn\", trangthaiban as \"Trang thái bàn\"\r\nfrom Ban");
+                tabledata = provider.execQuery("select * from Ban");
                 dgvResult.DataSource = table;
             }
             catch
@@ -36,11 +38,15 @@ namespace QuanLyCafe
         }
 
         //click vao bang
-        private void dgvResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvResult_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int index = e.RowIndex;
+            if (index >= 0) 
+            { 
             int t = dgvResult.CurrentCell.RowIndex;
-            lblText.Text = dgvResult.Rows[t].Cells[1].Value.ToString();
-            lblText.Tag = dgvResult.Rows[t].Cells[0].Value.ToString();
+            lblText.Text = tabledata.Rows[t][1].ToString();
+            lblText.Tag = tabledata.Rows[t][0].ToString();
+            }
         }
 
         //Them ban
@@ -52,9 +58,6 @@ namespace QuanLyCafe
                 if (name != "")
                 {
                     DataProvider provider = new DataProvider();
-
-                    provider.execNonQuery("USP_Add_Table @tenban", new object[] { name });
-
                     provider.execNonQuery("USP_Add_Table @tenban", new object[] {name});
                     loadTable();
                     MessageBox.Show("Đã thêm bàn thành công!", "Đã thêm", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -78,12 +81,7 @@ namespace QuanLyCafe
                 if (MessageBox.Show("Bạn có chắc xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
                     //Nhan yes
-                    DataProvider provider = new DataProvider();
-
-                    provider.execNonQuery("USP_Del_Table @tenban", new object[] { lblText.Text });
-
-
-                   
+                    DataProvider provider = new DataProvider();                
                     provider.execNonQuery("USP_Del_Table @tenban", new object[] { lblText.Text });
                 
                     loadTable();

@@ -125,7 +125,7 @@ namespace QuanLyCafe
                 string username = txtUsername.Text;
                 string displayname = txtDisplayname.Text;
                 string password = txtPassword.Text;
-                DateTime ngaysinh = Convert.ToDateTime(dateTimePicker1.Text);
+                DateTime ngaysinh = dateTimePicker1.Value;
                 string gioitinh = cob_GioiTinh.Text;
                 string cmnd = txtCMND.Text;
                 string email = txtEmail.Text;
@@ -137,15 +137,16 @@ namespace QuanLyCafe
                 }
                 DataProvider provider = new DataProvider();
                 provider.execNonQuery("USP_SuaThongTinTaiKhoan @mataikhoan , @tendangnhap , @matkhau , " +
-                    "@tennv , @ngaysinh , @gioitinh, @cmnd , @email , @sdt , " +
-                    "@loaitk", new object[] { label12.Tag.ToString(), displayname, password, username, ngaysinh, gioitinh, cmnd, email, sdt, type, });
+                    "@tennv , @ngaysinh , @gioitinh , @cmnd , @email , @sdt , " +
+                    "@loaitk", new object[] { label12.Tag.ToString(), username , password,displayname , ngaysinh, gioitinh, cmnd, email, sdt, type});
                 MessageBox.Show("Chỉnh sửa thành công!\n Tài khoản đã chỉnh sửa.", "Đã sửa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load();
                 clear();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Không sửa được!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show("Không sửa được!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 

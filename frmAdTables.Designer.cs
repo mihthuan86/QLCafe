@@ -199,7 +199,7 @@
             this.dgvResult.RowTemplate.Height = 24;
             this.dgvResult.Size = new System.Drawing.Size(453, 333);
             this.dgvResult.TabIndex = 11;
-            this.dgvResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResult_CellContentClick);
+            this.dgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResult_CellClick);
             // 
             // frmAdTables
             // 
